@@ -1,19 +1,11 @@
-// 2. ABOUT PAGE - Add Image component and metadata
 import Navbar from '@/components/Navbar'
-import Image from 'next/image' // ADD THIS
-import { Metadata } from 'next' // ADD THIS
-
-// ADD METADATA
-export const metadata: Metadata = {
-  title: 'About - Umubyeyi Marie Bienvenue',
-  description: 'Learn more about my experience in frontend development with React, Next.js, and modern web technologies.',
-}
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-purple-900 text-purple-100">
       <Navbar />
 
+      {/* Make this div a flex container centering content both ways */}
       <div className="flex-grow flex items-center justify-center px-4 py-12">
         <main className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
           <div className="md:w-2/3 text-left">
@@ -24,13 +16,10 @@ export default function AboutPage() {
           </div>
 
           <figure className="md:w-1/3">
-            {/* REPLACE img with Image component */}
-            <Image
+            <img
               src="/im.jpg"
-              alt="Portrait of Umubyeyi Marie Bienvenue"
-              width={320}
-              height={320}
-              className="w-80 h-80 rounded-full object-cover mx-auto md:mx-0 hover:scale-105 transition-transform duration-300"
+              alt="Portrait of Mary"
+              className="w-80 h-80 rounded-full object-cover mx-auto md:mx-0"
             />
           </figure>
         </main>
